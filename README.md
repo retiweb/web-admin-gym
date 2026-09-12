@@ -9,16 +9,6 @@
 A modern, full-stack Web Application designed to streamline gym daily operations, manage memberships, track transactions, and handle member/walk-in guest check-ins in real-time.
 
 > **Note for Recruiters:** This project serves as my hands-on deep dive into **Laravel Livewire**, demonstrating how to build dynamic, single-page-like interfaces (SPA feeling) entirely within PHP without the overhead of heavy JavaScript frameworks.
-
----
-
-## 📸 Preview
-
-| Dashboard & Transactions | Interactive Check-In Modal |
-| :---: | :---: |
-| ![Dashboard Screenshot](https://via.placeholder.com/600x350?text=Dashboard+UI+Preview) | ![Modal Screenshot](https://via.placeholder.com/600x350?text=Detail+Modal+Preview) |
-*(Ganti link gambar di atas dengan screenshot asli aplikasi Anda)*
-
 ---
 
 ## ✨ Key Features
