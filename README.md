@@ -1,59 +1,70 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏋️ Gym & Fitness Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/)
+[![Livewire](https://img.shields.io/badge/Livewire-4E56A6?style=for-the-badge&logo=livewire&logoColor=white)](https://livewire.laravel.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Alpine.js](https://img.shields.io/badge/Alpine.js-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=black)](https://alpinejs.dev/)
+[![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
 
-## About Laravel
+A modern, full-stack Web Application designed to streamline gym daily operations, manage memberships, track transactions, and handle member/walk-in guest check-ins in real-time.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+> **Note for Recruiters:** This project serves as my hands-on deep dive into **Laravel Livewire**, demonstrating how to build dynamic, single-page-like interfaces (SPA feeling) entirely within PHP without the overhead of heavy JavaScript frameworks.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📸 Preview
 
-## Learning Laravel
+| Dashboard & Transactions | Interactive Check-In Modal |
+| :---: | :---: |
+| ![Dashboard Screenshot](https://via.placeholder.com/600x350?text=Dashboard+UI+Preview) | ![Modal Screenshot](https://via.placeholder.com/600x350?text=Detail+Modal+Preview) |
+*(Ganti link gambar di atas dengan screenshot asli aplikasi Anda)*
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ✨ Key Features
 
-## Laravel Sponsors
+- 🎫 **Smart Check-In System:** Quick check-in for both registered **Gym Members** and **Daily Pass (Walk-in Guests)** with access code matching.
+- 💳 **Transaction Tracking:** Clear breakdown of package purchases, total revenue calculations, and receipt details.
+- 🗂️ **Dynamic Component Modals:** Native HTML `<dialog>` element integrated seamlessly with Livewire events (`$dispatch`) and Alpine.js for smooth UI rendering.
+- 🔍 **Real-time Search & Filtering:** Instant data lookup without full page reloads using Livewire reactive state.
+- 📊 **Membership Package Management:** Assign and update membership durations and status dynamically.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🛠️ Tech Stack & Architecture
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- **Backend Framework:** Laravel 11
+- **Reactivity & State:** Livewire 3 (Volt / Class Components) + Alpine.js
+- **Styling & UI:** Tailwind CSS
+- **Database:** MySQL (Structured with Eager Loading to prevent N+1 queries)
+- **Modal Architecture:** HTML5 Native `<dialog>` controlled via event-driven Alpine `@event.window` listener.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 💡 Key Engineering Insights & Learnings
 
-## Code of Conduct
+Building this application with Livewire provided valuable insights into modern Laravel workflows:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Event-Driven Component Interactivity:**
+   Implmenting dynamic modal windows using Livewire's `$dispatch` to pass ID parameters directly into child components without re-rendering the whole page.
+2. **Database Optimization:**
+   Utilizing Laravel Eloquent relationships (`CheckIn::with(['member', 'transaction'])`) to optimize query counts during data fetching.
+3. **Hybrid Frontend Patterns:**
+   Combining native browser APIs (HTML5 `<dialog>`) with Alpine.js for instantaneous UI responses, keeping state synchronization clean on the server via Livewire.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🚀 Getting Started Locally
 
-## License
+### Prerequisites
+- PHP `>= 8.2`
+- Composer
+- Node.js & NPM
+- Postgresql Database
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Installation Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/username/gym-management-livewire.git](https://github.com/username/gym-management-livewire.git)
+   cd gym-management-livewire
