@@ -4,7 +4,7 @@
 [![Livewire](https://img.shields.io/badge/Livewire-4E56A6?style=for-the-badge&logo=livewire&logoColor=white)](https://livewire.laravel.com/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Alpine.js](https://img.shields.io/badge/Alpine.js-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=black)](https://alpinejs.dev/)
-[![Postgresql](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Postgresql](https://img.shields.io/badge/Postgresql-00000F?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
 A modern, full-stack Web Application designed to streamline gym daily operations, manage memberships, track transactions, and handle member/walk-in guest check-ins in real-time.
 
